@@ -1,188 +1,403 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nadia Kchouk — Ingénieure IA</title>
-<meta name="description" content="Portfolio de Nadia Kchouk, ingénieure en intelligence artificielle — NLP, ML en production, systèmes de recommandation.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nada Ben Hammouda — AI Engineer</title>
+
+  <meta
+    name="description"
+    content="Nada Ben Hammouda — Biomedical Engineer transitioning into AI Engineering. AI, Cloud, Computer Vision and Healthcare."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="grain"></div>
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="nav-inner">
 
-<header class="topbar">
-  <span class="logo">NK<span class="logo-dot">.</span></span>
-  <nav>
-    <a href="#stack">Stack</a>
-    <a href="#projets">Projets</a>
-    <a href="#parcours">Parcours</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="topbar-cta" href="#contact">Me contacter</a>
-</header>
+      <a href="#top" class="logo">NB.</a>
 
-<main>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">// ingénieure ia — nlp & ml en production</p>
-      <h1>Je conçois des systèmes qui <span class="accent">raisonnent</span>,<br>pas seulement des modèles.</h1>
-      <p class="hero-sub">
-        Nadia Kchouk. Je construis des pipelines ML fiables, du prototype de recherche
-        jusqu'au service en production, avec une attention particulière portée à la latence,
-        au coût d'inférence et à l'explicabilité.
-      </p>
-      <div class="hero-actions">
-        <a href="#console" class="btn btn-primary">Voir la démo en direct</a>
-        <a href="#projets" class="btn btn-ghost">Voir les projets</a>
-      </div>
+      <a
+        href="assets/CV.pdf"
+        target="_blank"
+        class="nav-cv"
+      >
+        CV <span>↗</span>
+      </a>
+
     </div>
+  </header>
 
-    <div class="hero-console" id="console">
-      <div class="console-bar">
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="console-title">inference_console.py</span>
-      </div>
-      <div class="console-body">
-        <p class="console-line">$ deploy simple_function() <span class="cursor-blink">▌</span></p>
-        <p class="console-hint">Cette fonction tourne réellement, en local, dans ton navigateur — aucun serveur.</p>
-        <textarea id="console-input" rows="3" placeholder="Écris une phrase à analyser, ex : « ce projet est vraiment prometteur mais le délai m'inquiète un peu »"></textarea>
-        <button id="console-run" class="btn btn-primary btn-console">Exécuter analyze_text()</button>
-        <div id="console-output" class="console-output" aria-live="polite"></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ STACK ============ -->
-  <section id="stack" class="stack">
-    <p class="eyebrow">// stack & domaines</p>
-    <h2>Ce que je manipule au quotidien</h2>
+  <main id="top">
 
-    <div class="stack-grid">
-      <div class="stack-card">
-        <span class="stack-label">langages</span>
-        <ul><li>Python</li><li>SQL</li><li>TypeScript</li><li>Bash</li></ul>
-      </div>
-      <div class="stack-card">
-        <span class="stack-label">ml / dl</span>
-        <ul><li>PyTorch</li><li>Hugging Face</li><li>scikit-learn</li><li>ONNX</li></ul>
-      </div>
-      <div class="stack-card">
-        <span class="stack-label">mlops</span>
-        <ul><li>Docker</li><li>MLflow</li><li>Airflow</li><li>Kubernetes</li></ul>
-      </div>
-      <div class="stack-card">
-        <span class="stack-label">infra & données</span>
-        <ul><li>AWS (SageMaker, S3)</li><li>PostgreSQL</li><li>Redis</li><li>FastAPI</li></ul>
-      </div>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="hero section">
 
-  <!-- ============ PROJETS ============ -->
-  <section id="projets" class="projets">
-    <p class="eyebrow">// projets sélectionnés</p>
-    <h2>Des modèles qui tiennent en production</h2>
+      <div class="hero-content">
 
-    <div class="projet-list">
-
-      <article class="projet">
-        <div class="projet-meta">
-          <span class="projet-tag">NLP</span>
-          <span class="projet-tag">Production</span>
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          Biomedical Engineer → AI Engineer
         </div>
-        <h3>Moteur de classification de tickets support</h3>
-        <p>
-          Pipeline de classification multi-label sur 40k tickets/mois, basé sur un modèle
-          DistilBERT fine-tuné et distillé pour tourner sous 50ms en CPU. Réduction de 35%
-          du temps de tri manuel côté support client.
+
+        <h1>
+          I build AI systems<br>
+          for <em>real-world</em> problems.
+        </h1>
+
+        <p class="hero-text">
+          From data and machine learning to cloud deployment,
+          I design practical AI solutions with a biomedical perspective.
         </p>
-        <div class="projet-tech">
-          <span>PyTorch</span><span>Hugging Face</span><span>FastAPI</span><span>Docker</span>
-        </div>
-      </article>
 
-      <article class="projet">
-        <div class="projet-meta">
-          <span class="projet-tag">Recommandation</span>
-          <span class="projet-tag">A/B testing</span>
+        <div class="hero-actions">
+          <a href="#projects" class="button button-primary">
+            Explore projects <span>↓</span>
+          </a>
+
+          <a
+            href="assets/CV.pdf"
+            target="_blank"
+            class="button button-secondary"
+          >
+            View CV <span>↗</span>
+          </a>
         </div>
-        <h3>Système de recommandation temps réel</h3>
+
+      </div>
+
+      <div class="hero-side">
+
+        <div class="system-card">
+
+          <div class="system-top">
+            <span>CURRENT FOCUS</span>
+            <span class="mono">2026</span>
+          </div>
+
+          <div class="system-line"></div>
+
+          <div class="system-row">
+            <span>AI Engineering</span>
+            <strong>ACTIVE</strong>
+          </div>
+
+          <div class="system-row">
+            <span>Cloud AI</span>
+            <strong>ACTIVE</strong>
+          </div>
+
+          <div class="system-row">
+            <span>Healthcare AI</span>
+            <strong>FOCUS</strong>
+          </div>
+
+          <div class="system-row">
+            <span>Computer Vision</span>
+            <strong>BUILDING</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SELECTED WORK -->
+    <section id="projects" class="section projects-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-number">01</span>
+          <h2>Selected work</h2>
+        </div>
+
         <p>
-          Architecture hybride (filtrage collaboratif + embeddings de contenu) servie via
-          Redis pour du ranking en moins de 20ms. Gain de 12% sur le taux de clic mesuré
-          en A/B test sur 3 semaines.
+          A few systems I have designed, trained and deployed.
         </p>
-        <div class="projet-tech">
-          <span>Python</span><span>Redis</span><span>Airflow</span><span>AWS SageMaker</span>
-        </div>
-      </article>
 
-      <article class="projet">
-        <div class="projet-meta">
-          <span class="projet-tag">MLOps</span>
-          <span class="projet-tag">Monitoring</span>
+      </div>
+
+      <div id="project-list" class="project-list"></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-number">02</span>
+          <h2>About</h2>
         </div>
-        <h3>Plateforme de suivi de dérive de modèle</h3>
+
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-title">
+          Biomedical<br>
+          <span>→ AI</span>
+        </div>
+
+        <div class="about-copy">
+
+          <p>
+            My background in biomedical engineering led me toward
+            AI engineering, where I build practical systems around
+            data, models and cloud infrastructure.
+          </p>
+
+          <p>
+            I bring experience from healthcare, medical imaging and
+            regulated pharmaceutical environments into the way I
+            approach AI projects.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STACK -->
+    <section id="stack" class="section stack-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-number">03</span>
+          <h2>Stack</h2>
+        </div>
+
         <p>
-          Détection automatique de data drift et de dégradation de performance sur 8 modèles
-          en production, avec alerting Slack et tableaux de bord MLflow. A évité deux
-          incidents de production majeurs en six mois.
+          The technologies I use to turn ideas into working systems.
         </p>
-        <div class="projet-tech">
-          <span>MLflow</span><span>Kubernetes</span><span>PostgreSQL</span><span>Grafana</span>
+
+      </div>
+
+      <div class="stack-layout">
+
+        <div class="stack-tabs" id="stack-tabs"></div>
+
+        <div class="stack-content" id="stack-content"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section journey-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-number">04</span>
+          <h2>Journey</h2>
         </div>
-      </article>
+
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">2021</span>
+
+          <div>
+            <h3>Medical Imaging</h3>
+            <p>
+              IDMIT / CEA — PET/CT, DICOM, 3D Slicer
+              and biomedical imaging analysis.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">2024</span>
+
+          <div>
+            <h3>Biomedical Engineering</h3>
+            <p>
+              Engineering degree at Polytech Lyon,
+              with a focus on biomedical technologies and healthcare.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">2025</span>
+
+          <div>
+            <h3>Pharma & Regulated Environment</h3>
+            <p>
+              Biomedical Consultant at ALTEN Belgium,
+              working in a regulated pharmaceutical environment.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item active">
+
+          <span class="timeline-year">2026</span>
+
+          <div>
+            <h3>AI Engineering</h3>
+            <p>
+              Building AI applications across Computer Vision,
+              RAG, Machine Learning and Cloud platforms.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CV -->
+    <section class="section cv-section">
+
+      <div class="cv-card">
+
+        <div>
+          <span class="section-number">05</span>
+
+          <h2>
+            Want the full picture?
+          </h2>
+
+          <p>
+            My CV brings together my biomedical background,
+            professional experience and AI projects.
+          </p>
+        </div>
+
+        <a
+          href="assets/CV.pdf"
+          target="_blank"
+          class="button button-primary"
+        >
+          Open CV <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+
+      <div class="contact-main">
+
+        <span class="section-number">06</span>
+
+        <h2>
+          Let's build<br>
+          something useful.
+        </h2>
+
+        <a
+          href="mailto:nada.benhammouda@gmail.com"
+          class="contact-email"
+        >
+          nada.benhammouda@gmail.com
+        </a>
+
+      </div>
+
+      <div class="contact-links">
+
+        <a
+          href="https://github.com/nadabh98"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub <span>↗</span>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nada-ben-hammouda-528a47165/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal">
+
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-window">
+
+      <button id="modal-close" class="modal-close">
+        ×
+      </button>
+
+      <div id="modal-content"></div>
 
     </div>
-  </section>
 
-  <!-- ============ PARCOURS ============ -->
-  <section id="parcours" class="parcours">
-    <p class="eyebrow">// parcours</p>
-    <h2>Chronologie</h2>
+  </div>
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-date">2023 — présent</span>
-        <h3>Ingénieure IA senior — Entreprise A</h3>
-        <p>Conception et mise en production de modèles NLP à l'échelle de l'entreprise. Encadrement de deux ingénieurs juniors.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-date">2021 — 2023</span>
-        <h3>Ingénieure Machine Learning — Entreprise B</h3>
-        <p>Développement du système de recommandation produit. Mise en place de la première pipeline MLOps de l'équipe data.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-date">2019 — 2021</span>
-        <h3>Master Intelligence Artificielle — Université C</h3>
-        <p>Spécialisation en traitement automatique du langage. Mémoire sur la compression de modèles Transformer.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="contact">
-    <p class="eyebrow">// contact</p>
-    <h2>Discutons de votre projet</h2>
-    <p class="contact-sub">Disponible pour des missions freelance ou des postes à temps plein en ingénierie IA.</p>
-    <div class="contact-links">
-      <a href="mailto:nadia.kchouk@example.com">nadia.kchouk@example.com</a>
-      <a href="https://linkedin.com/in/nadia-kchouk" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/nadia-kchouk" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
+  <footer class="footer">
 
-</main>
+    <span>© 2026 Nada Ben Hammouda</span>
 
-<footer>
-  <p>© 2026 Nadia Kchouk. Construit à la main, sans framework.</p>
-</footer>
+    <span class="mono">
+      Biomedical Engineering × AI
+    </span>
 
-<script src="script.js"></script>
+  </footer>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>

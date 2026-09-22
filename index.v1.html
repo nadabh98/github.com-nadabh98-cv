@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nadia Kchouk — Ingénieure IA</title>
+<meta name="description" content="Portfolio de Nadia Kchouk, ingénieure en intelligence artificielle — NLP, ML en production, systèmes de recommandation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="topbar">
+  <span class="logo">NK<span class="logo-dot">.</span></span>
+  <nav>
+    <a href="#stack">Stack</a>
+    <a href="#projets">Projets</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="topbar-cta" href="#contact">Me contacter</a>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">// ingénieure ia — nlp & ml en production</p>
+      <h1>Je conçois des systèmes qui <span class="accent">raisonnent</span>,<br>pas seulement des modèles.</h1>
+      <p class="hero-sub">
+        Nadia Kchouk. Je construis des pipelines ML fiables, du prototype de recherche
+        jusqu'au service en production, avec une attention particulière portée à la latence,
+        au coût d'inférence et à l'explicabilité.
+      </p>
+      <div class="hero-actions">
+        <a href="#console" class="btn btn-primary">Voir la démo en direct</a>
+        <a href="#projets" class="btn btn-ghost">Voir les projets</a>
+      </div>
+    </div>
+
+    <div class="hero-console" id="console">
+      <div class="console-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="console-title">inference_console.py</span>
+      </div>
+      <div class="console-body">
+        <p class="console-line">$ deploy simple_function() <span class="cursor-blink">▌</span></p>
+        <p class="console-hint">Cette fonction tourne réellement, en local, dans ton navigateur — aucun serveur.</p>
+        <textarea id="console-input" rows="3" placeholder="Écris une phrase à analyser, ex : « ce projet est vraiment prometteur mais le délai m'inquiète un peu »"></textarea>
+        <button id="console-run" class="btn btn-primary btn-console">Exécuter analyze_text()</button>
+        <div id="console-output" class="console-output" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section id="stack" class="stack">
+    <p class="eyebrow">// stack & domaines</p>
+    <h2>Ce que je manipule au quotidien</h2>
+
+    <div class="stack-grid">
+      <div class="stack-card">
+        <span class="stack-label">langages</span>
+        <ul><li>Python</li><li>SQL</li><li>TypeScript</li><li>Bash</li></ul>
+      </div>
+      <div class="stack-card">
+        <span class="stack-label">ml / dl</span>
+        <ul><li>PyTorch</li><li>Hugging Face</li><li>scikit-learn</li><li>ONNX</li></ul>
+      </div>
+      <div class="stack-card">
+        <span class="stack-label">mlops</span>
+        <ul><li>Docker</li><li>MLflow</li><li>Airflow</li><li>Kubernetes</li></ul>
+      </div>
+      <div class="stack-card">
+        <span class="stack-label">infra & données</span>
+        <ul><li>AWS (SageMaker, S3)</li><li>PostgreSQL</li><li>Redis</li><li>FastAPI</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <section id="projets" class="projets">
+    <p class="eyebrow">// projets sélectionnés</p>
+    <h2>Des modèles qui tiennent en production</h2>
+
+    <div class="projet-list">
+
+      <article class="projet">
+        <div class="projet-meta">
+          <span class="projet-tag">NLP</span>
+          <span class="projet-tag">Production</span>
+        </div>
+        <h3>Moteur de classification de tickets support</h3>
+        <p>
+          Pipeline de classification multi-label sur 40k tickets/mois, basé sur un modèle
+          DistilBERT fine-tuné et distillé pour tourner sous 50ms en CPU. Réduction de 35%
+          du temps de tri manuel côté support client.
+        </p>
+        <div class="projet-tech">
+          <span>PyTorch</span><span>Hugging Face</span><span>FastAPI</span><span>Docker</span>
+        </div>
+      </article>
+
+      <article class="projet">
+        <div class="projet-meta">
+          <span class="projet-tag">Recommandation</span>
+          <span class="projet-tag">A/B testing</span>
+        </div>
+        <h3>Système de recommandation temps réel</h3>
+        <p>
+          Architecture hybride (filtrage collaboratif + embeddings de contenu) servie via
+          Redis pour du ranking en moins de 20ms. Gain de 12% sur le taux de clic mesuré
+          en A/B test sur 3 semaines.
+        </p>
+        <div class="projet-tech">
+          <span>Python</span><span>Redis</span><span>Airflow</span><span>AWS SageMaker</span>
+        </div>
+      </article>
+
+      <article class="projet">
+        <div class="projet-meta">
+          <span class="projet-tag">MLOps</span>
+          <span class="projet-tag">Monitoring</span>
+        </div>
+        <h3>Plateforme de suivi de dérive de modèle</h3>
+        <p>
+          Détection automatique de data drift et de dégradation de performance sur 8 modèles
+          en production, avec alerting Slack et tableaux de bord MLflow. A évité deux
+          incidents de production majeurs en six mois.
+        </p>
+        <div class="projet-tech">
+          <span>MLflow</span><span>Kubernetes</span><span>PostgreSQL</span><span>Grafana</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PARCOURS ============ -->
+  <section id="parcours" class="parcours">
+    <p class="eyebrow">// parcours</p>
+    <h2>Chronologie</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">2023 — présent</span>
+        <h3>Ingénieure IA senior — Entreprise A</h3>
+        <p>Conception et mise en production de modèles NLP à l'échelle de l'entreprise. Encadrement de deux ingénieurs juniors.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2021 — 2023</span>
+        <h3>Ingénieure Machine Learning — Entreprise B</h3>
+        <p>Développement du système de recommandation produit. Mise en place de la première pipeline MLOps de l'équipe data.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2019 — 2021</span>
+        <h3>Master Intelligence Artificielle — Université C</h3>
+        <p>Spécialisation en traitement automatique du langage. Mémoire sur la compression de modèles Transformer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <p class="eyebrow">// contact</p>
+    <h2>Discutons de votre projet</h2>
+    <p class="contact-sub">Disponible pour des missions freelance ou des postes à temps plein en ingénierie IA.</p>
+    <div class="contact-links">
+      <a href="mailto:nadia.kchouk@example.com">nadia.kchouk@example.com</a>
+      <a href="https://linkedin.com/in/nadia-kchouk" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/nadia-kchouk" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Nadia Kchouk. Construit à la main, sans framework.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
