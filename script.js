@@ -2,10 +2,63 @@
    PORTFOLIO DATA
 ========================================================= */
 
+
 const projects = [
   {
-    id: "deforestation",
+    id: "cloudsentinel",
     number: "01",
+    title: "CloudSentinel AI",
+    category: "MLOps · Cloud Engineering · Google Cloud",
+    short: "An end-to-end anomaly detection pipeline for cloud infrastructure metrics.",
+    description:
+      "An end-to-end cloud engineering project using synthetic infrastructure metrics to demonstrate anomaly detection, model training, API deployment, event-driven ingestion and monitoring. The project integrates Vertex AI, Cloud Run, Pub/Sub, BigQuery and a GKE Autopilot demonstration. Model evaluation is limited to synthetic data and does not establish performance on real infrastructure.",
+    tools: [
+      "Python",
+      "Isolation Forest",
+      "FastAPI",
+      "Vertex AI",
+      "Cloud Run",
+      "GKE Autopilot",
+      "Pub/Sub",
+      "BigQuery",
+      "Terraform",
+      "Docker",
+      "Cloud Build",
+      "Cloud Logging"
+    ],
+    result: "F1 0.91 · Synthetic data",
+    stack: "Google Cloud + FastAPI + Terraform",
+    github: "https://github.com/nadabh98/cloudsentinel-ai"
+  },
+  {
+    id: "health-risk",
+    number: "02",
+    title: "AI Health Risk Prediction",
+    category: "Machine Learning · AWS · Serverless",
+    short: "Environmental risk classification using global WHO air-quality data.",
+    description:
+      "An end-to-end machine-learning application using the WHO Ambient Air Quality Database to classify environmental risk levels. The project combines data preparation, an XGBoost model, an S3 model artifact, a Docker image in ECR, serverless inference with AWS Lambda, an API Gateway endpoint and a Streamlit dashboard. It assesses environmental indicators and is not an individual medical diagnosis.",
+    tools: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "XGBoost",
+      "WHO Data",
+      "Amazon S3",
+      "Amazon ECR",
+      "AWS Lambda",
+      "API Gateway",
+      "CloudWatch",
+      "Streamlit",
+      "Docker"
+    ],
+    result: "Serverless ML API deployed",
+    stack: "AWS + XGBoost + Lambda",
+    github: "https://github.com/nadabh98/ai-health-aws"
+  },
+  {
+    id: "deforestation",
+    number: "03",
     title: "AI Deforestation Detection",
     category: "Computer Vision · Google Cloud",
     short: "Detecting land-cover changes from multi-temporal Sentinel-2 imagery.",
@@ -24,12 +77,11 @@ const projects = [
     stack: "PyTorch + Google Cloud",
     github: "https://github.com/nadabh98/deforestation-ai"
   },
-
   {
     id: "healthcare-rag",
-    number: "02",
+    number: "04",
     title: "Healthcare RAG AI Assistant",
-    category: "RAG · Azure AI",
+    category: "Generative AI · Azure AI",
     short: "A retrieval-augmented AI assistant for healthcare documents.",
     description:
       "An AI assistant combining document processing, embeddings, retrieval and LLM generation to produce responses grounded in a healthcare knowledge base.",
@@ -45,86 +97,89 @@ const projects = [
     result: "Grounded AI responses",
     stack: "Azure AI + RAG",
     github: "https://github.com/nadabh98/healthcare-rag-ai-assistant"
-  },
-
-  {
-    id: "health-risk",
-    number: "03",
-    title: "AI Health Risk Prediction",
-    category: "Machine Learning · AWS",
-    short: "Machine-learning workflows using global air-quality data.",
-    description:
-      "A machine-learning project based on WHO air-quality data, covering data preparation, exploration and modelling of environmental health-related indicators.",
-    tools: [
-      "Python",
-      "Pandas",
-      "Machine Learning",
-      "WHO Data",
-      "AWS",
-      "SageMaker"
-    ],
-    result: "Global environmental dataset",
-    stack: "Python + AWS",
-    github: "https://github.com/nadabh98/ai-health-aws"
   }
 ];
-
-
-/* =========================================================
-   STACK DATA
-========================================================= */
 
 const stackData = {
   "AI Engineering": {
     description:
-      "Building machine-learning and generative-AI systems from experimentation to application.",
+      "Building machine-learning and AI applications, from model experimentation to API integration.",
     skills: [
       "Python",
       "PyTorch",
+      "Scikit-learn",
       "Machine Learning",
       "Deep Learning",
       "Computer Vision",
-      "RAG",
+      "XGBoost",
+      "Isolation Forest",
       "LLM",
+      "RAG",
       "Embeddings",
-      "Agents IA",
       "FastAPI"
     ]
   },
-
   "Cloud": {
     description:
-      "Using cloud platforms to deploy AI applications and production-oriented workloads.",
+      "Designing and deploying cloud-based applications and AI workloads across Google Cloud, AWS and Azure.",
     skills: [
       "Google Cloud",
       "Cloud Run",
+      "GKE Autopilot",
+      "Vertex AI",
+      "BigQuery",
+      "Pub/Sub",
+      "Cloud Storage",
+      "Cloud Build",
+      "Artifact Registry",
       "Azure AI",
       "Azure AI Foundry",
-      "OpenAI",
-      "AWS AI",
-      "SageMaker",
+      "AWS",
+      "Amazon S3",
+      "Amazon ECR",
+      "AWS Lambda",
+      "API Gateway",
+      "CloudWatch",
       "Docker"
     ]
   },
-
+  "MLOps & DevOps": {
+    description:
+      "Connecting model development, infrastructure as code, containerisation, deployment and operational monitoring.",
+    skills: [
+      "Model Training",
+      "Vertex AI Model Registry",
+      "Docker",
+      "Terraform",
+      "CI/CD Concepts",
+      "Cloud Build",
+      "Cloud Logging",
+      "Monitoring",
+      "IAM",
+      "Workload Identity",
+      "GKE Autopilot",
+      "Serverless Deployment"
+    ]
+  },
   "Data": {
     description:
-      "Preparing, analysing and working with structured and unstructured data.",
+      "Preparing, analysing and transforming structured data for machine-learning applications.",
     skills: [
       "SQL",
       "Pandas",
       "NumPy",
       "R",
       "Data Cleaning",
-      "EDA",
+      "Exploratory Data Analysis",
+      "Feature Engineering",
+      "BigQuery",
       "Git",
       "GitHub"
     ]
   },
-
   "Biomedical": {
     description:
-      "Connecting AI and engineering with healthcare and biomedical applications.",
+      "Connecting engineering, medical imaging and data-driven approaches with biomedical applications.",
     skills: [
       "Medical Imaging",
       "PET/CT",
@@ -136,6 +191,7 @@ const stackData = {
     ]
   }
 };
+
 
 
 /* =========================================================
